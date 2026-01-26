@@ -1,0 +1,11 @@
+{
+  "name": "Gemini dollar",
+  "address": "0x056fd409e1d7a124bd7017459dfea2f387b6d5cd",
+  "symbol": "GUSD",
+  "decimals": 2,
+  "logo": "https://github.saturndex.org/eth/0x056fd409e1d7a124bd7017459dfea2f387b6d5cd/logo.png",
+  "website": "https://gemini.com/dollar/",
+  "twitter": "https://twitter.com/Gemini",
+  "saturn_blog_tag": "gemini-dollar",
+  "forum": "https://forum.saturndex.org/t/gemini-dollar-gusd/2782"
+}

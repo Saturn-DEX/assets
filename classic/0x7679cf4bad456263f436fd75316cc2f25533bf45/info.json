@@ -1,0 +1,10 @@
+{
+  "name": "Trashed DAO Token",
+  "address": "0x7679cf4bad456263f436fd75316cc2f25533bf45",
+  "symbol": "TRASH",
+  "decimals": 4,
+  "logo": "https://github.saturndex.org/etc/0x7679cf4bad456263f436fd75316cc2f25533bf45/logo.png",
+  "website": "https://trashed.pw",
+  "twitter": "https://twitter.com/TrashedDAO",
+  "telegram": "http://t.me/trashedbot"
+}

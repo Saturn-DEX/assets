@@ -1,0 +1,8 @@
+{
+  "name": "USDX",
+  "address": "0xbec4a69d6a5fbcb2303c13d24ea1a51a6f19bd12",
+  "symbol": "USDX",
+  "decimals": 0,
+  "warning_reason": "This may not be the token you are looking for, make sure you have checked the token's contract address before trading.",
+  "warning_support": "https://forum.saturndex.org/t/always-do-your-own-research/6754/"
+}

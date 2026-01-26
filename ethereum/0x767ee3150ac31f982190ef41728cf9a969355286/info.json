@@ -1,0 +1,14 @@
+{
+  "name": "Xamatek",
+  "address": "0x767ee3150ac31f982190ef41728cf9a969355286",
+  "symbol": "XAK",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x767ee3150ac31f982190ef41728cf9a969355286/logo.png",
+  "website": "https://xamatek.mobi/",
+  "twitter": "https://twitter.com/xamatekmobi",
+  "telegram": "https://t.me/Xamatek_Community",
+  "coingecko": "https://www.coingecko.com/en/coins/xamatek",
+  "forum": "https://forum.saturndex.org/t/xamatek-xak-trading-update/6140",
+  "warning_reason": "Xamatek (XAK) contains features that allows the token creator to lock and unlock our order book contract. This means XAK can stop trading at any moment and be frozen, this is controlled by Xamatek and not Saturn Network.",
+  "warning_support": "https://forum.saturndex.org/t/xamatek-xak-trading-update/6140"
+}

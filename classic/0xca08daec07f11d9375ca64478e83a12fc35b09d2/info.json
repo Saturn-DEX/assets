@@ -1,0 +1,9 @@
+{
+  "name": "MoneroToken",
+  "address": "0xca08daec07f11d9375ca64478e83a12fc35b09d2",
+  "symbol": "XMRT",
+  "decimals": 8,
+  "logo": "https://github.saturndex.org/etc/0xca08daec07f11d9375ca64478e83a12fc35b09d2/logo.png",
+  "website": "https://xmrt.org",
+  "forum": "https://forum.saturndex.org/t/xmrt-monero-token/2297"
+}

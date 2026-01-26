@@ -1,0 +1,15 @@
+{
+  "name": "CoronaCoin",
+  "address": "0xb80112e516dabcac6ab4665f1bd650996403156c",
+  "symbol": "nCoV",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0xb80112e516dabcac6ab4665f1bd650996403156c/logo.png",
+  "website": "http://coronacoinofficial.com",
+  "reddit": "https://www.reddit.com/r/CoronaCoin/",
+  "discord": "https://discord.gg/wP6yX2w",
+  "facebook": "https://www.facebook.com/CoronaCoin-103104017960729",
+  "telegram": "https://t.me/CoronaCoinOfficial",
+  "coingecko": "https://www.coingecko.com/en/coins/coronacoin",
+  "warning_reason": "We have received reports that CoronaCoin (NCOV) project now has several forks, following multiple exit scams by lead developers. Check the token contract address before trading and always do your own research.",
+  "warning_support": "https://forum.saturndex.org/t/coronacoin-ncov-have-deployed-a-new-token-contract-address/6926"
+}

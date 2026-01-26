@@ -1,0 +1,10 @@
+{
+  "name": "BitcoinSoV",
+  "address": "0x26946ada5ecb57f3a1f91605050ce45c482c9eb1",
+  "symbol": "BSoV",
+  "decimals": 8,
+  "logo": "https://github.saturndex.org/eth/0x26946ada5ecb57f3a1f91605050ce45c482c9eb1/logo.png",
+  "twitter": "https://twitter.com/BSOV_",
+  "website": "https://www.btcsov.com",
+  "forum": "https://forum.saturndex.org/t/bitcoinsov-mineable-erc918-with-1-txn-burn/5004"
+}

@@ -5,7 +5,7 @@
   "scripts": {
     "test": "node test.js"
   },
-  "repository": "git@github.com:saturn-network/assets.git",
+  "repository": "git@github.com:saturndex.org/assets.git",
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.15"

@@ -1,0 +1,13 @@
+{
+  "name": "Bridge Protocol",
+  "address": "0xb736ba66aad83adb2322d1f199bfa32b3962f13c",
+  "symbol": "BRDG",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0xb736ba66aad83adb2322d1f199bfa32b3962f13c/logo.png",
+  "website": "http://www.bridgeprotocol.io/",
+  "telegram": "https://t.me/BridgeProtocol",
+  "reddit": "https://www.reddit.com/r/iambridgeprotocol/",
+  "facebook": "https://www.facebook.com/BridgeProtocol/",
+  "twitter": "https://twitter.com/bridgeprotocol",
+  "coingecko": "https://www.coingecko.com/en/coins/bridge-protocol/"
+}

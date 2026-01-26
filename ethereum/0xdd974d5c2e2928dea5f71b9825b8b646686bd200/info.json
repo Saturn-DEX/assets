@@ -1,0 +1,14 @@
+{
+  "name": "Kyber Network Crystal",
+  "address": "0xdd974d5c2e2928dea5f71b9825b8b646686bd200",
+  "symbol": "KNC",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0xdd974d5c2e2928dea5f71b9825b8b646686bd200/logo.png",
+  "website": "https://kyber.network/",
+  "twitter": "https://twitter.com/kybernetwork",
+  "facebook": "https://www.facebook.com/kybernetwork",
+  "reddit": "https://www.reddit.com/r/kybernetwork/",
+  "telegram": "https://t.me/kybernetwork",
+  "saturn_blog_tag": "kyber-network",
+  "forum": "https://forum.saturndex.org/t/kyber-network-crystal-knc/2721"
+}

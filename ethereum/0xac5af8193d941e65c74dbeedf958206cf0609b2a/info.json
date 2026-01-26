@@ -1,0 +1,9 @@
+{
+  "name": "CoronaCoin Extra",
+  "address": "0xac5af8193d941e65c74dbeedf958206cf0609b2a",
+  "symbol": "CoroEx",
+  "decimals": 12,
+  "logo": "https://github.saturndex.org/eth/0xac5af8193d941e65c74dbeedf958206cf0609b2a/logo.png",
+  "website": "https://coro-ex.com",
+  "discord": "https://discord.gg/PMhvFvz"
+}

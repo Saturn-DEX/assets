@@ -1,0 +1,10 @@
+{
+  "name": "EtherscanTokenTraker",
+  "address": "0x1bdd797483c6843ce6c1119c4ac20910d3cee833",
+  "symbol": "ETT",
+  "decimals": 0,
+  "logo": "https://github.saturndex.org/eth/0x1bdd797483c6843ce6c1119c4ac20910d3cee833/logo.png",
+  "twitter": "https://twitter.com/ETraker",
+  "warning_reason": "EtherscanTokenTraker (ETT) is not associated with Etherscan in any way, make sure you have checked the token's contract address before trading.",
+  "warning_support": "https://forum.saturndex.org/t/always-do-your-own-research/6754/"
+}

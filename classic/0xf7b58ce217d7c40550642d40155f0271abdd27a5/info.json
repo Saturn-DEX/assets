@@ -1,0 +1,9 @@
+{
+  "name": "ETHEREUM",
+  "address": "0xf7b58ce217d7c40550642d40155f0271abdd27a5",
+  "symbol": "ETH",
+  "decimals": 18,
+  "website": "https://www.google.com/?query=DYOR",
+  "warning_reason": "This is a token someone has created on Ethereum Classic, it is not ETH.",
+  "warning_support": "https://forum.saturndex.org/t/scam-fraud-warnings/3539"
+}

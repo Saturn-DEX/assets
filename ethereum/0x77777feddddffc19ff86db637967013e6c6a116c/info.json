@@ -1,0 +1,12 @@
+{
+  "name": "TORN Token",
+  "address": "0x77777feddddffc19ff86db637967013e6c6a116c",
+  "symbol": "TORN",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x77777feddddffc19ff86db637967013e6c6a116c/logo.png",
+  "website": "https://tornado.cash/",
+  "twitter": "https://twitter.com/TornadoCash",
+  "telegram": "https://t.me/TornadoCashOfficial",
+  "coingecko": "https://www.coingecko.com/en/coins/tornado-cash",
+  "discord": "https://discord.gg/fjkm6HXz74"
+}

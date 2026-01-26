@@ -1,0 +1,10 @@
+{
+  "name": "Bitcoin Classic Token",
+  "address": "0x1be6d61b1103d91f7f86d47e6ca0429259a15ff0",
+  "symbol": "BCT",
+  "decimals": 8,
+  "logo": "https://github.saturndex.org/etc/0x1be6d61b1103d91f7f86d47e6ca0429259a15ff0/logo.png",
+  "website": "https://classicbitcoin.org/",
+  "twitter": "https://twitter.com/bctproject",
+  "forum": "https://forum.saturndex.org/t/bitcoin-classic-token-first-mineable-erc223-token-on-etc/1826"
+}

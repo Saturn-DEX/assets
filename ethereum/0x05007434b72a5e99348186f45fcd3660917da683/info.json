@@ -1,0 +1,8 @@
+{
+  "name": "NLC Token",
+  "address": "0x05007434b72a5e99348186f45fcd3660917da683",
+  "symbol": "NLC",
+  "decimals": 18,
+  "warning_reason": "NLC Token (NLC) recently updated their token contract, make sure you are trading the correct token.",
+  "warning_support": "https://forum.saturndex.org/t/always-do-your-own-research/6754/"
+}

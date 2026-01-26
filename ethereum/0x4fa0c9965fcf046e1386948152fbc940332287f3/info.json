@@ -1,0 +1,11 @@
+{
+  "name": "ARXO Wallet",
+  "address": "0x4fa0c9965fcf046e1386948152fbc940332287f3",
+  "symbol": "ARXO",
+  "decimals": 12,
+  "logo": "https://github.saturndex.org/eth/0x4fa0c9965fcf046e1386948152fbc940332287f3/logo.png",
+  "website": "http://www.arxowallet.com/",
+  "twitter": "https://twitter.com/arxowallet",
+  "telegram": "https://t.me/ARXO_Global",
+  "coingecko": "https://www.coingecko.com/en/coins/arxo-wallet/eth"
+}

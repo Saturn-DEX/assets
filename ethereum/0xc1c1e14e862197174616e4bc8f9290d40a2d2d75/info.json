@@ -1,0 +1,12 @@
+{
+  "name": "Thopi Services",
+  "address": "0xc1c1e14e862197174616e4bc8f9290d40a2d2d75",
+  "symbol": "TOIS",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0xc1c1e14e862197174616e4bc8f9290d40a2d2d75/logo.png",
+  "website": "https://thopi.services/",
+  "twitter": "https://twitter.com/ThopiServices",
+  "telegram": "https://t.me/ThopiServices",
+  "warning_reason": "Thopi Services (TOIS) token appears to be a frozen airdrop or locked. It is not currently tradable.",
+  "warning_support": "https://forum.saturndex.org/t/thopi-services-tois/7100"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "XY Oracle",
+  "address": "0x55296f69f40ea6d20e478533c15a6b08b654e758",
+  "symbol": "XYO",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x55296f69f40ea6d20e478533c15a6b08b654e758/logo.png",
+  "website": "https://xyo.network/",
+  "facebook": "https://www.facebook.com/OfficialXYO/",
+  "twitter": "https://twitter.com/officialxyo",
+  "telegram": "https://t.me/xyonetwork",
+  "reddit": "https://www.reddit.com/r/XYONetwork/",
+  "coingecko": "https://www.coingecko.com/en/coins/xyo-network/",
+  "warning_reason": "XY Oracle (XYO) is incompatible with Saturn Protocol. Any attempt to create orders or execute trades is at your own risk.",
+  "warning_support": "https://forum.saturndex.org/t/tokens-incompatible-with-saturn-protocol/6850"
+}

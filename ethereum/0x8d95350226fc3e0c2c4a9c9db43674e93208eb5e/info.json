@@ -1,0 +1,9 @@
+{
+  "name": "Neo CoronaCoin",
+  "address": "0x8d95350226fc3e0c2c4a9c9db43674e93208eb5e",
+  "symbol": "NCOV",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x8d95350226fc3e0c2c4a9c9db43674e93208eb5e/logo.png",
+  "warning_reason": "We have received reports that CoronaCoin (NCOV) project now has several forks, following multiple exit scams by lead developers. Check the token contract address before trading and always do your own research.",
+  "warning_support": "https://forum.saturndex.org/t/coronacoin-ncov-have-deployed-a-new-token-contract-address/6926"
+}
