@@ -6,7 +6,7 @@
   "logo": "https://github.saturndex.org/eth/0x5c406d99e04b8494dc253fcc52943ef82bca7d75/logo.png",
   "website": "https://cusd.money",
   "telegram": "https://t.me/cusdcurrency",
-  "twitter": "https://twitter.com/cusdcurrency",
+  "x": "https://x.com/cusdcurrency",
   "warning_reason": "cUSD Currency (cUSD) token is incompatible with Saturn Protocol. Any attempt to create orders or execute trades is at your own risk.",
   "warning_support": "https://forum.saturndex.org/t/cusd-currency-cusd-token-is-incompatible-with-saturn-protocol/6583"
 }
