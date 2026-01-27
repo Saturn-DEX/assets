@@ -9,6 +9,5 @@
   "telegram": "https://t.me/kickico",
   "facebook": "https://www.facebook.com/kickecosystem",
   "coingecko": "https://www.coingecko.com/en/coins/kickico/",
-  "warning_reason": "If you can't trade KickToken (KICK) it is most likely because you have tokens part of their FrozenDrop. These tokens have been locked by the KICK project.",
-  "warning_support": "https://forum.saturndex.org/t/kick-token-problem/7106"
+  "warning_reason": "If you can't trade KickToken (KICK) it is most likely because you have tokens part of their FrozenDrop. These tokens have been locked by the KICK project."
 }

@@ -3,6 +3,5 @@
   "address": "0x8b847669b2e5dd5101736e41da8ec38653065aeb",
   "symbol": "HTX",
   "decimals": 2,
-  "warning_reason": "Huptex (HTX) has migrated to a new token contract, please make sure you are trading the correct token.",
-  "warning_support": "https://forum.saturndex.org/t/always-do-your-own-research/6754"
+  "warning_reason": "Huptex (HTX) has migrated to a new token contract, please make sure you are trading the correct token."
 }

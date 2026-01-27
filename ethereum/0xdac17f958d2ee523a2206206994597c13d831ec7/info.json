@@ -8,8 +8,5 @@
   "x": "https://x.com/Tether_to",
   "facebook": "https://www.facebook.com/tether.to",
   "reddit": "https://www.reddit.com/r/Tether/",
-  "forum": "https://forum.saturndex.org/t/tether-usdt-stablecoin/2800",
-  "saturn_blog_tag": "tether-usd",
-  "warning_reason": "Tether USD (USDT) token is incompatible with Saturn Protocol. Any attempt to create orders or execute trades is at your own risk.",
-  "warning_support": "https://forum.saturndex.org/t/tokens-incompatible-with-saturn-protocol/6850"
+  "warning_reason": "Tether USD (USDT) token is incompatible with Saturn Protocol. Any attempt to create orders or execute trades is at your own risk."
 }

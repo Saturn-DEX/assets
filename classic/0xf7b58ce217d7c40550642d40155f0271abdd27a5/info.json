@@ -4,6 +4,5 @@
   "symbol": "ETH",
   "decimals": 18,
   "website": "https://www.google.com/?query=DYOR",
-  "warning_reason": "This is a token someone has created on Ethereum Classic, it is not ETH.",
-  "warning_support": "https://forum.saturndex.org/t/scam-fraud-warnings/3539"
+  "warning_reason": "This is a token someone has created on Ethereum Classic, it is not ETH."
 }
