@@ -1,0 +1,12 @@
+{
+  "name": "Synth sUSD",
+  "address": "0x57ab1ec28d129707052df4df418d58a2d46d5f51",
+  "symbol": "sUSD",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x57ab1ec28d129707052df4df418d58a2d46d5f51/logo.png",
+  "website": "https://www.synthetix.io/",
+  "x": "https://x.com/synthetix_io",
+  "discord": "https://discordapp.com/invite/AEdUHzt",
+  "reddit": "https://www.reddit.com/r/synthetix_io/",
+  "coingecko": "https://www.coingecko.com/en/coins/susd"
+}

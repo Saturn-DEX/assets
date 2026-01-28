@@ -1,0 +1,7 @@
+{
+  "name": "Digital CHF",
+  "address": "0x0703fb3ccf77d117ecbb19774b5f97c5a4875c9d",
+  "symbol": "DCHF",
+  "decimals": "18",
+  "warning_reason": "This is probably not the token you are looking for, make sure you have checked the token's contract address before trading."
+}

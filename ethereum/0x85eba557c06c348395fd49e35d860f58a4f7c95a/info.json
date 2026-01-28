@@ -1,0 +1,13 @@
+{
+  "name": "H3X",
+  "address": "0x85eba557c06c348395fd49e35d860f58a4f7c95a",
+  "symbol": "H3X",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x85eba557c06c348395fd49e35d860f58a4f7c95a/logo.png",
+  "website": "https://h3x.exchange/",
+  "x": "https://x.com/h3x",
+  "telegram": "https://t.me/H3Xcrypto",
+  "coingecko": "https://www.coingecko.com/en/coins/h3x",
+  "discord": "https://discord.gg/MTj2XVb",
+  "warning_reason": "Note that H3X (H3X) token has a 10% burn rate on every transaction."
+}

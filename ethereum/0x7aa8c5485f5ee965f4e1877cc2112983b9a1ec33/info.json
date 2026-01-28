@@ -1,0 +1,10 @@
+{
+  "name": "GrowGoldCoin",
+  "address": "0x7aa8c5485f5ee965f4e1877cc2112983b9a1ec33",
+  "symbol": "GGC",
+  "decimals": 8,
+  "logo": "https://github.saturndex.org/eth/0x7aa8c5485f5ee965f4e1877cc2112983b9a1ec33/logo.png",
+  "x": "https://x.com/coin_grow",
+  "telegram": "https://t.me/NevermessageyouFirst",
+  "warning_reason": "GrowGoldCoin (GGC) token is incompatible with Saturn Protocol. Any attempt to create orders or execute trades is at your own risk."
+}

@@ -1,0 +1,10 @@
+{
+  "name": "NuChainLink Token",
+  "address": "0x44a718ac1bbff570b8a0d9a25a0ba8f317e049b7",
+  "symbol": "NuLINK",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x44a718ac1bbff570b8a0d9a25a0ba8f317e049b7/logo.png",
+  "website": "https://nuchain.link/",
+  "telegram": "https://t.me/nuchainlink",
+  "discord": "https://discord.gg/rVH3epy"
+}

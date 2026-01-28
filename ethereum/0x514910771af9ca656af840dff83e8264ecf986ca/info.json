@@ -1,0 +1,11 @@
+{
+  "name": "ChainLink Token",
+  "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+  "symbol": "LINK",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x514910771af9ca656af840dff83e8264ecf986ca/logo.png",
+  "website": "https://chain.link/",
+  "x": "https://x.com/chainlink",
+  "reddit": "https://www.reddit.com/r/Chainlink/",
+  "telegram": "https://t.me/chainlinkofficial"
+}

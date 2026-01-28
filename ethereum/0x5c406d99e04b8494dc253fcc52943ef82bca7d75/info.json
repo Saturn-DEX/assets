@@ -1,0 +1,11 @@
+{
+  "name": "cUSD Currency",
+  "address": "0x5c406d99e04b8494dc253fcc52943ef82bca7d75",
+  "symbol": "cUSD",
+  "decimals": 6,
+  "logo": "https://github.saturndex.org/eth/0x5c406d99e04b8494dc253fcc52943ef82bca7d75/logo.png",
+  "website": "https://cusd.money",
+  "telegram": "https://t.me/cusdcurrency",
+  "x": "https://x.com/cusdcurrency",
+  "warning_reason": "cUSD Currency (cUSD) token is incompatible with Saturn Protocol. Any attempt to create orders or execute trades is at your own risk."
+}

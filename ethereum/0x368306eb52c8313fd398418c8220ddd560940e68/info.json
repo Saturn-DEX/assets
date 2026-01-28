@@ -1,0 +1,10 @@
+{
+  "name": "SwapMatic Token",
+  "address": "0x368306eb52c8313fd398418c8220ddd560940e68",
+  "symbol": "SWAM",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x368306eb52c8313fd398418c8220ddd560940e68/logo.png",
+  "website": "https://web.swapmatic.io/",
+  "x": "https://x.com/SwapMatic",
+  "discord": "https://discord.gg/8TtU52wk"
+}

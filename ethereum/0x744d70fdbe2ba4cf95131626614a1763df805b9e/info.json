@@ -1,0 +1,12 @@
+{
+  "name": "StatusNetwork",
+  "address": "0x744d70fdbe2ba4cf95131626614a1763df805b9e",
+  "symbol": "SNT",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x744d70fdbe2ba4cf95131626614a1763df805b9e/logo.png",
+  "website": "https://status.im/",
+  "x": "https://x.com/ethstatus",
+  "reddit": "https://www.reddit.com/r/statusim/",
+  "facebook": "https://www.facebook.com/ethstatus",
+  "coingecko": "https://www.coingecko.com/en/coins/status/"
+}

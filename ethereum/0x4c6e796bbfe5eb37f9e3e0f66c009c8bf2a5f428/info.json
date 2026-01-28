@@ -1,0 +1,13 @@
+{
+  "name": "FC Bitcoin",
+  "address": "0x4c6e796bbfe5eb37f9e3e0f66c009c8bf2a5f428",
+  "symbol": "FCBTC",
+  "decimals": 8,
+  "logo": "https://github.saturndex.org/eth/0x4c6e796bbfe5eb37f9e3e0f66c009c8bf2a5f428/logo.png",
+  "website": "https://fcbitcoin.com",
+  "x": "https://x.com/fcbitcoin",
+  "facebook": "https://facebook.com/fcbitcoin",
+  "telegram": "https://t.me/fcbitcoinvspremierleague",
+  "discord": "https://discord.gg/jfZcAEF",
+  "coingecko": "https://www.coingecko.com/en/coins/fc-bitcoin"
+}

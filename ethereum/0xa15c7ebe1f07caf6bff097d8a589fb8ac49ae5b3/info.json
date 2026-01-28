@@ -1,0 +1,11 @@
+{
+  "name": "Pundi X Token",
+  "address": "0xa15c7ebe1f07caf6bff097d8a589fb8ac49ae5b3",
+  "symbol": "NPXS",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0xa15c7ebe1f07caf6bff097d8a589fb8ac49ae5b3/logo.png",
+  "website": "https://pundix.com/",
+  "facbeook": "https://web.facebook.com/pundixlabs/",
+  "x": "https://x.com/PundiXLabs",
+  "telegram": "https://t.me/Pundix"
+}

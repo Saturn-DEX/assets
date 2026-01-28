@@ -1,0 +1,10 @@
+{
+  "name": "Uniswap",
+  "address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+  "symbol": "UNI",
+  "decimals": 18,
+  "website": "https://uniswap.org/",
+  "logo": "https://github.saturndex.org/eth/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984/logo.png",
+  "x": "https://x.com/UniswapProtocol",
+  "coingecko": "https://www.coingecko.com/en/coins/uniswap"
+}

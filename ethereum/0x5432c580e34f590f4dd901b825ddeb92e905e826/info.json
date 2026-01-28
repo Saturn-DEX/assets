@@ -1,0 +1,13 @@
+{
+  "name": "TradeX Token",
+  "address": "0x5432c580e34f590f4dd901b825ddeb92e905e826",
+  "symbol": "TXH",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x5432c580e34f590f4dd901b825ddeb92e905e826/logo.png",
+  "website": "https://www.tradextoken.com/",
+  "x": "https://x.com/tradex_token",
+  "reddit": "https://www.reddit.com/r/tradextoken/",
+  "facebook": "https://www.facebook.com/tradextoken",
+  "telegram": "https://t.me/tradextokencommunity",
+  "coingecko": "https://www.coingecko.com/en/coins/tradex-token/"
+}

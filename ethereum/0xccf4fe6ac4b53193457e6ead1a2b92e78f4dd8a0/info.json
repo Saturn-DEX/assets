@@ -1,0 +1,12 @@
+{
+  "name": "Nifexcoin",
+  "address": "0xccf4fe6ac4b53193457e6ead1a2b92e78f4dd8a0",
+  "symbol": "NIX",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0xccf4fe6ac4b53193457e6ead1a2b92e78f4dd8a0/logo.png",
+  "website": "https://www.nifex.net",
+  "x": "https://www.x.com/nifexc",
+  "facebook": "https://m.facebook.com/exchange.nifex",
+  "telegram": "https://t.me/nifexc",
+  "coingecko": "https://www.coingecko.com/en/coins/nifexcoin#markets"
+}

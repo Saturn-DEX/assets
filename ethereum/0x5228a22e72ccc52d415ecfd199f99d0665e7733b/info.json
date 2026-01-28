@@ -1,0 +1,12 @@
+{
+  "name": "pTokens BTC",
+  "address": "0x5228a22e72ccc52d415ecfd199f99d0665e7733b",
+  "symbol": "pBTC",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x5228a22e72ccc52d415ecfd199f99d0665e7733b/logo.png",
+  "website": "https://ptokens.io/",
+  "x": "https://x.com/pTokens_io",
+  "reddit": "https://www.reddit.com/r/pTokens/",
+  "coingecko": "https://www.coingecko.com/en/coins/ptokens-btc",
+  "telegram": "https://t.me/ptokens"
+}

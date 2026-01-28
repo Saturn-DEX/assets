@@ -1,0 +1,12 @@
+{
+  "name": "Bancor Network Token",
+  "address": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+  "symbol": "BNT",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c/logo.png",
+  "website": "https://bancor.network/",
+  "facebook": "https://www.facebook.com/bancor",
+  "reddit": "https://reddit.com/r/Bancor/",
+  "x": "https://x.com/bancor",
+  "telegram": "https://t.me/bancor"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "VaccinaCoin",
+  "address": "0x567d297d0cbb66195b268162a4547f220ef49c51",
+  "symbol": "SERUM",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x567d297d0cbb66195b268162a4547f220ef49c51/logo.png",
+  "website": "https://vaccin.tech/",
+  "discord": "https://discord.gg/sSM7za2",
+  "x": "https://x.com/vaccinacoin",
+  "telegram": "https://t.me/vaccinacoin",
+  "coingecko": "https://www.coingecko.com/en/coins/vaccinacoin"
+}

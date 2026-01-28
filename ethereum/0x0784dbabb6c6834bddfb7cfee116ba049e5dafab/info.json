@@ -1,0 +1,11 @@
+{
+  "name": "IBTC",
+  "address": "0x0784dbabb6c6834bddfb7cfee116ba049e5dafab",
+  "symbol": "IBTC",
+  "decimals": 8,
+  "logo": "https://github.saturndex.org/eth/0x0784dbabb6c6834bddfb7cfee116ba049e5dafab/logo.png",
+  "website": "http://ibtctoken.com/",
+  "reddit": "https://www.reddit.com/r/iBTCToken/",
+  "x": "https://x.com/ibtctoken",
+  "telegram": "https://t.me/ibtctoken"
+}

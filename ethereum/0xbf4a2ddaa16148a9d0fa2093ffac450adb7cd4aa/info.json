@@ -1,0 +1,11 @@
+{
+  "name": "Ethereum Money",
+  "address": "0xbf4a2ddaa16148a9d0fa2093ffac450adb7cd4aa",
+  "symbol": "ETHMNY",
+  "decimals": 2,
+  "logo": "https://github.saturndex.org/eth/0xbf4a2ddaa16148a9d0fa2093ffac450adb7cd4aa/logo.png",
+  "website": "https://ETHMNY.NET",
+  "x": "https://x.com/ethmny",
+  "telegram": "https://t.me/ethmny",
+  "coingecko": "https://www.coingecko.com/coins/ethereum-money"
+}

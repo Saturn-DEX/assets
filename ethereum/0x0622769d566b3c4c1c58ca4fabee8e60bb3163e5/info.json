@@ -1,0 +1,10 @@
+{
+  "name": "Yellow Tether",
+  "address": "0x0622769d566b3c4c1c58ca4fabee8e60bb3163e5",
+  "symbol": "YUSDT",
+  "decimals": 6,
+  "logo": "https://github.saturndex.org/eth/0x0622769d566b3c4c1c58ca4fabee8e60bb3163e5/logo.png",
+  "website": "https://yellowtether.club/",
+  "x": "https://x.com/tetheryellow",
+  "telegram": "https://t.me/yusdt"
+}

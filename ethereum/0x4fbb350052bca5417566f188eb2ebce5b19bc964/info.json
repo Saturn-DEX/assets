@@ -1,0 +1,14 @@
+{
+  "name": "Rigo Token",
+  "address": "0x4fbb350052bca5417566f188eb2ebce5b19bc964",
+  "symbol": "GRG",
+  "decimals": 18,
+  "logo": "https://github.saturndex.org/eth/0x4fbb350052bca5417566f188eb2ebce5b19bc964/logo.png",
+  "website": "https://rigoblock.com/",
+  "x": "https://x.com/rigoblock",
+  "reddit": "https://www.reddit.com/r/rigoblock/",
+  "telegram": "https://t.me/rigoblockprotocol",
+  "facebook": "https://facebook.com/RigoBlockProtocol",
+  "coingecko": "https://www.coingecko.com/en/coins/rigoblock",
+  "discord": "https://discord.gg/FXd8EU8"
+}

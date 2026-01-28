@@ -1,0 +1,12 @@
+{
+  "name": "Foton USD",
+  "address": "0x7f20f6e68bd14dbdb95244dbee6c316999a2d4c1",
+  "symbol": "FUSD",
+  "decimals": 8,
+  "logo": "https://github.saturndex.org/eth/0x7f20f6e68bd14dbdb95244dbee6c316999a2d4c1/logo.png",
+  "website": "https://fotonusd.info",
+  "x": "https://x.com/FotonUSD",
+  "telegram": "https://t.me/FotonUSD",
+  "facebook": "https://www.facebook.com/FotonUSD",
+  "coingecko": "https://www.coingecko.com/en/coins/foton-usd"
+}
