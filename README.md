@@ -27,7 +27,7 @@ Here is an an example below for Saturn Token:
     "telegram": "https://t.me/saturndex",
     "facebook": "https://www.facebook.com/saturndex",
     "coingecko": "https://www.coingecko.com/en/coins/saturn-token",
-    "discord": "https://discord.gg/wPbWWCV2"
+    "discord": "https://discord.gg/9PRwAPGx"
   }
 ```
 
