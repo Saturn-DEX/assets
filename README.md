@@ -17,10 +17,10 @@ Here is an an example below for Saturn Token:
 ```
   {
     "name": "Saturn Token",
-    "address": "0xb9440022a095343b440d590fcd2d7a3794bd76c8",
+    "address": "0x57Ae4e5Bd7dA72159e2e8878E7d8610eECC6eAAc",
     "symbol": "SATURN",
     "decimals": 4,
-    "logo": "https://github.saturndex.org/eth/0xb9440022a095343b440d590fcd2d7a3794bd76c8/logo.png",
+    "logo": "https://github.saturndex.org/eth/0x57Ae4e5Bd7dA72159e2e8878E7d8610eECC6eAAc/logo.png",
     "website": "https://saturndex.org/",
     "x": "https://x.com/saturndexorg",
     "reddit": "https://www.reddit.com/r/saturndex/",
