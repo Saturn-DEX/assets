@@ -8,8 +8,8 @@ For any token listing support you can reach us via email: info@saturndex.org
 ## How to add your logo & additional information
 * Step 1: Ensure you have a 200x200 logo on a transparent background in PNG format ready. For the best results, your logo should take up most of the canvas & you do not want to have a transparent margin around it. We also recommend announcing your project in our discord group
 * Step 2: Fork the project's repository.
-* Step 3: Upload your token's logo to the relevant directory: Ethereum tokens go in assets/eth/${tokenAddress}/logo.png whereas Ethereum Classic tokens go in assets/etc/${tokenAddress}/logo.png
-* Step 4: Add your token's information to the relevant JSON file: Ethereum tokens use assets/eth/${tokenAddress}/info.json whereas Ethereum Classic tokens use assets/etc/${tokenAddress}/info.json.
+* Step 3: Upload your token's logo to the relevant directory: Ethereum tokens go in assets/ethereum/${tokenAddress}/logo.png whereas Ethereum Classic tokens go in assets/classic/${tokenAddress}/logo.png
+* Step 4: Add your token's information to the relevant JSON file: Ethereum tokens use assets/ethereum/${tokenAddress}/info.json whereas Ethereum Classic tokens use assets/classic/${tokenAddress}/info.json.
 
 For any information you do not have, do not leave it blank, remove the whole row.
 
