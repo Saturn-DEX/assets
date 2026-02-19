@@ -13,7 +13,7 @@ For any token listing support you can reach us via email: info@saturndex.org
 
 For any information you do not have, do not leave it blank, remove the whole row.
 
-Here is an an example below for Saturn Token:
+Here is an an example below for Saturn Token on Ethereum:
 ```
   {
     "name": "Saturn Token",
