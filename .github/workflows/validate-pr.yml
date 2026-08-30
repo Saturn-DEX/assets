@@ -1,0 +1,58 @@
+name: Validate Asset PR
+
+on:
+  pull_request:
+    paths:
+      - 'ethereum/0x*/*.json'
+      - 'ethereum/0x*/*.png'
+      - 'classic/0x*/*.json'
+      - 'classic/0x*/*.png'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-asset-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: List changed asset files
+        id: changed
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              per_page: 100
+            });
+            const all = data.map(f => f.filename);
+            const infoJson = all.filter(f => f.endsWith('info.json'));
+            const assetFiles = all.filter(f => /^(ethereum|classic)\/0x/.test(f));
+            core.summary.addHeading('Changed asset files')
+              .addList(assetFiles.length ? assetFiles : ['(none)'])
+              .write();
+            core.setOutput('infoJson', infoJson.join('\n'));
+            core.setOutput('assetFiles', assetFiles.join('\n'));
+
+      - name: Check duplicates
+        if: steps.changed.outputs.assetFiles != ''
+        run: node .github/scripts/check-duplicates.js
+
+      - name: Validate changed info.json files
+        if: steps.changed.outputs.infoJson != ''
+        env:
+          CHANGED_FILES: ${{ steps.changed.outputs.infoJson }}
+        run: node .github/scripts/validate-assets.js
