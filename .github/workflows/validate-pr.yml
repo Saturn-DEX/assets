@@ -3,10 +3,10 @@ name: Validate Asset PR
 on:
   pull_request:
     paths:
-      - 'ethereum/0x*/*.json'
-      - 'ethereum/0x*/*.png'
-      - 'classic/0x*/*.json'
-      - 'classic/0x*/*.png'
+      - "ethereum/0x*/*.json"
+      - "ethereum/0x*/*.png"
+      - "classic/0x*/*.json"
+      - "classic/0x*/*.png"
 
 permissions:
   contents: read
@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: List changed asset files
         id: changed
@@ -42,14 +42,33 @@ jobs:
             const all = data.map(f => f.filename);
             const infoJson = all.filter(f => f.endsWith('info.json'));
             const assetFiles = all.filter(f => /^(ethereum|classic)\/0x/.test(f));
+            // Files the PR actually *adds* (new token submissions) — these must not
+            // duplicate a token that is already listed on the base branch.
+            const addedAssetFiles = data
+              .filter(f => f.status === 'added' && /^(ethereum|classic)\/0x/.test(f.filename))
+              .map(f => f.filename);
             core.summary.addHeading('Changed asset files')
               .addList(assetFiles.length ? assetFiles : ['(none)'])
               .write();
             core.setOutput('infoJson', infoJson.join('\n'));
             core.setOutput('assetFiles', assetFiles.join('\n'));
+            core.setOutput('addedAssetFiles', addedAssetFiles.join('\n'));
+
+      - name: Fetch base branch
+        # Needed by check-duplicates.js to reject PRs that re-submit a token
+        # already listed on the base branch (a merged-tree scan cannot see this).
+        # The ref name is passed via env (never interpolated into the shell script)
+        # to keep run-script injection surface at zero.
+        if: steps.changed.outputs.assetFiles != ''
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: git fetch --depth=1 origin "$BASE_REF"
 
       - name: Check duplicates
         if: steps.changed.outputs.assetFiles != ''
+        env:
+          ADDED_FILES: ${{ steps.changed.outputs.addedAssetFiles }}
+          BASE_REF: FETCH_HEAD
         run: node .github/scripts/check-duplicates.js
 
       - name: Validate changed info.json files
