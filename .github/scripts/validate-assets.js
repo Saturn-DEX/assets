@@ -8,7 +8,11 @@ const path = require("path");
 
 const SUPPORTED_CHAINS = ["ethereum", "classic"];
 
-const REQUIRED_FIELDS = ["name", "address", "symbol", "decimals"];
+// Logo is mandatory for PR-touched tokens (new + edit). 19 existing grandfathered
+// tokens without logo are NOT failed when the script falls back to a full scan
+// (no CHANGED_FILES env). Only CHANGED_FILES entries are held to the logo rule.
+const BASE_REQUIRED_FIELDS = ["name", "address", "symbol", "decimals"];
+const LOGO_REQUIRED_FIELD = "logo";
 
 function isValidAddress(address) {
     return /^0x[0-9a-f]{40}$/.test(address);
@@ -19,7 +23,7 @@ function isValidAddress(address) {
  * (e.g. "ethereum/0xabc…/info.json" -> "0xabc…"). Returns null if absent.
  */
 function extractAddressFromPath(filePath) {
-    const parts = filePath.split(path.sep);
+    const parts = filePath.split(/[\\/]/);
     for (const part of parts) {
         if (part.startsWith("0x") && part.length === 42) {
             return part;
@@ -28,15 +32,19 @@ function extractAddressFromPath(filePath) {
     return null;
 }
 
-function validateInfoJson(filePath, expectedAddress) {
+function validateInfoJson(filePath, expectedAddress, opts = {}) {
+    const { isChangedFile = true } = opts;
     const errors = [];
 
     try {
         const content = fs.readFileSync(filePath, "utf-8");
         const data = JSON.parse(content);
 
-        // Check required fields
-        for (const field of REQUIRED_FIELDS) {
+        // Check required fields — logo only for touched tokens (grandfather)
+        const requiredFields = isChangedFile
+            ? [...BASE_REQUIRED_FIELDS, LOGO_REQUIRED_FIELD]
+            : BASE_REQUIRED_FIELDS;
+        for (const field of requiredFields) {
             if (!(field in data)) {
                 errors.push(`Missing required field: ${field}`);
             }
@@ -61,28 +69,103 @@ function validateInfoJson(filePath, expectedAddress) {
             }
         }
 
-        // Validate decimals
+        // Validate decimals — must be integer 0..18 (decimals plural is canonical)
         if (data.decimals !== undefined) {
             if (
                 typeof data.decimals !== "number" ||
+                !Number.isInteger(data.decimals) ||
+                !Number.isFinite(data.decimals) ||
                 data.decimals < 0 ||
                 data.decimals > 18
             ) {
-                errors.push(`Invalid decimals: ${data.decimals}`);
+                errors.push(
+                    `Invalid decimals (must be integer 0..18): ${data.decimals}`,
+                );
             }
         }
 
-        // Validate symbol
-        if (data.symbol && typeof data.symbol !== "string") {
-            errors.push("Symbol must be a string");
+        // Validate symbol — non-empty trimmed string
+        if ("symbol" in data) {
+            if (typeof data.symbol !== "string") {
+                errors.push("Symbol must be a string");
+            } else if (data.symbol.trim().length === 0) {
+                errors.push("Symbol must be non-empty");
+            }
         }
 
-        // Validate name
-        if (data.name && typeof data.name !== "string") {
-            errors.push("Name must be a string");
+        // Validate name — non-empty trimmed string
+        if ("name" in data) {
+            if (typeof data.name !== "string") {
+                errors.push("Name must be a string");
+            } else if (data.name.trim().length === 0) {
+                errors.push("Name must be non-empty");
+            }
         }
 
-        // Validate URLs if present
+        // Validate logo field (mandatory for touched tokens, format for all when present)
+        if ("logo" in data || isChangedFile) {
+            if (!("logo" in data)) {
+                // already reported as missing required, no extra format error
+            } else if (typeof data.logo !== "string") {
+                errors.push("Logo must be a string URL");
+            } else if (data.logo.trim().length === 0) {
+                errors.push("Logo must be non-empty");
+            } else {
+                const rawLogo = data.logo;
+                if (rawLogo !== rawLogo.trim()) {
+                    errors.push(
+                        `Logo URL has leading/trailing whitespace: "${rawLogo}"`,
+                    );
+                }
+                const trimmedLogo = rawLogo.trim();
+                try {
+                    new URL(trimmedLogo);
+                } catch {
+                    errors.push(`Invalid URL for logo: ${rawLogo}`);
+                }
+                // Optional strict shape warning: should point at same chain/address logo.png
+                if (expectedAddress) {
+                    const parts = filePath.split(/[\\/]/);
+                    let chainFromPath = null;
+                    for (const p of parts)
+                        if (SUPPORTED_CHAINS.includes(p)) chainFromPath = p;
+                    if (chainFromPath) {
+                        // Enforce that logo URL at least contains the address
+                        if (
+                            !trimmedLogo
+                                .toLowerCase()
+                                .includes(expectedAddress.toLowerCase())
+                        ) {
+                            errors.push(
+                                `Logo URL should contain token address "${expectedAddress.toLowerCase()}": ${rawLogo}`,
+                            );
+                        }
+                    }
+                }
+            }
+            // Filesystem check: logo.png must exist for touched tokens (whole-dir diff scope)
+            if (isChangedFile && expectedAddress) {
+                const parts = filePath.split(/[\\/]/);
+                let chainFromPath = null;
+                for (const p of parts)
+                    if (SUPPORTED_CHAINS.includes(p)) chainFromPath = p;
+                if (chainFromPath) {
+                    const logoPath = path.join(
+                        process.cwd(),
+                        chainFromPath,
+                        expectedAddress.toLowerCase(),
+                        "logo.png",
+                    );
+                    if (!fs.existsSync(logoPath)) {
+                        errors.push(
+                            `Missing logo.png file for ${chainFromPath}/${expectedAddress.toLowerCase()} (required for touched tokens)`,
+                        );
+                    }
+                }
+            }
+        }
+
+        // Validate URLs if present — trim check + URL validity
         const urlFields = [
             "website",
             "x",
@@ -93,9 +176,24 @@ function validateInfoJson(filePath, expectedAddress) {
             "coingecko",
         ];
         for (const field of urlFields) {
-            if (data[field] && typeof data[field] === "string") {
+            if (
+                data[field] !== undefined &&
+                data[field] !== null &&
+                data[field] !== ""
+            ) {
+                if (typeof data[field] !== "string") {
+                    errors.push(`${field} must be a string URL`);
+                    continue;
+                }
+                if (data[field] !== data[field].trim()) {
+                    errors.push(
+                        `Invalid URL for ${field} (leading/trailing whitespace): "${data[field]}"`,
+                    );
+                    continue;
+                }
+                if (data[field].trim().length === 0) continue;
                 try {
-                    new URL(data[field]);
+                    new URL(data[field].trim());
                 } catch {
                     errors.push(`Invalid URL for ${field}: ${data[field]}`);
                 }
@@ -113,7 +211,7 @@ function validateInfoJson(filePath, expectedAddress) {
 }
 
 function validateFilePath(filePath) {
-    const parts = filePath.split(path.sep);
+    const parts = filePath.split(/[\\/]/);
 
     // Find the chain and address in the path
     let chain = null;
@@ -137,6 +235,9 @@ function validateFilePath(filePath) {
 
     if (address !== address.toLowerCase()) {
         return [`Address directory must be lowercase: ${address}`];
+    }
+    if (!isValidAddress(address)) {
+        return [`Invalid address directory hex: ${address}`];
     }
 
     return [];
@@ -166,14 +267,14 @@ function findAllAssetFiles() {
 }
 
 async function main() {
-    // Find changed files from git diff or scan all
+    // Find changed files from env or scan all (grandfather: logo mandatory only for changed files)
     let filesToValidate = [];
+    let isFullScan = false;
+    const changedFilesEnv = process.env.CHANGED_FILES || "";
 
     try {
-        // Try to get changed files from environment
-        const changedFiles = process.env.CHANGED_FILES || "";
-        if (changedFiles) {
-            filesToValidate = changedFiles
+        if (changedFilesEnv) {
+            filesToValidate = changedFilesEnv
                 .split("\n")
                 .filter(
                     (f) =>
@@ -182,19 +283,24 @@ async function main() {
                             f.startsWith("classic/0x")),
                 );
         }
-    } catch (e) {
-        // Ignore
+    } catch (_e) {
+        // Ignore CHANGED_FILES parse errors
     }
 
-    // If no changed files, scan all
+    // If no changed files, scan all — grandfather mode: logo not mandatory
     if (filesToValidate.length === 0) {
         filesToValidate = findAllAssetFiles();
+        isFullScan = true;
     }
 
     let hasErrors = false;
+    const changedSet = new Set(filesToValidate);
 
     for (const file of filesToValidate) {
         console.log(`\nValidating: ${file}`);
+        const isChangedFile = !isFullScan || changedSet.has(file);
+        // In full-scan mode, isChangedFile is true for all but we want grandfather → treat as NOT changed
+        const effectiveIsChanged = changedFilesEnv ? isChangedFile : false;
 
         // Validate file path
         const pathErrors = validateFilePath(file);
@@ -205,7 +311,9 @@ async function main() {
         }
 
         // Validate info.json content (directory address is passed for the cross-check)
-        const errors = validateInfoJson(file, extractAddressFromPath(file));
+        const errors = validateInfoJson(file, extractAddressFromPath(file), {
+            isChangedFile: effectiveIsChanged,
+        });
         if (errors.length > 0) {
             hasErrors = true;
             console.error("  ❌ Content errors:");

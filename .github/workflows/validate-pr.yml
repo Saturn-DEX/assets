@@ -33,19 +33,21 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const { data } = await github.rest.pulls.listFiles({
+            const files = await github.paginate(github.rest.pulls.listFiles, {
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: context.issue.number,
               per_page: 100
             });
-            const all = data.map(f => f.filename);
+            const all = files.map(f => f.filename);
             const infoJson = all.filter(f => f.endsWith('info.json'));
-            const assetFiles = all.filter(f => /^(ethereum|classic)\/0x/.test(f));
-            // Files the PR actually *adds* (new token submissions) — these must not
-            // duplicate a token that is already listed on the base branch.
-            const addedAssetFiles = data
-              .filter(f => f.status === 'added' && /^(ethereum|classic)\/0x/.test(f.filename))
+            const re = /^(ethereum|classic)\/0x/.test.bind(
+              /^(ethereum|classic)\/0x/
+            );
+            const assetFiles = all.filter(f => re(f));
+            // PR-added files must not duplicate base (per-chain).
+            const addedAssetFiles = files
+              .filter(f => f.status === 'added' && re(f.filename))
               .map(f => f.filename);
             core.summary.addHeading('Changed asset files')
               .addList(assetFiles.length ? assetFiles : ['(none)'])
@@ -55,10 +57,9 @@ jobs:
             core.setOutput('addedAssetFiles', addedAssetFiles.join('\n'));
 
       - name: Fetch base branch
-        # Needed by check-duplicates.js to reject PRs that re-submit a token
-        # already listed on the base branch (a merged-tree scan cannot see this).
-        # The ref name is passed via env (never interpolated into the shell script)
-        # to keep run-script injection surface at zero.
+        # Needed by check-duplicates.js to reject PRs that re-submit
+        # a token already on the base branch (merged-tree cannot see it).
+        # BASE_REF via env keeps run-script injection at zero.
         if: steps.changed.outputs.assetFiles != ''
         env:
           BASE_REF: ${{ github.base_ref }}
@@ -68,6 +69,7 @@ jobs:
         if: steps.changed.outputs.assetFiles != ''
         env:
           ADDED_FILES: ${{ steps.changed.outputs.addedAssetFiles }}
+          ASSET_FILES: ${{ steps.changed.outputs.assetFiles }}
           BASE_REF: FETCH_HEAD
         run: node .github/scripts/check-duplicates.js
 
