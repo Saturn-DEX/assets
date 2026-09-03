@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-03T16:16:13.242Z",
-  "totalTokens": 891,
+  "generatedAt": "2026-09-03T16:27:09.675Z",
+  "totalTokens": 892,
   "tokens": [
     {
       "name": "Gastoken.io",
@@ -2276,6 +2276,13 @@
       "address": "0x4a220e6096b25eadb88358cb44068a3248254675",
       "chain": "ethereum",
       "logo": "https://github.saturndex.org/ethereum/0x4a220e6096b25eadb88358cb44068a3248254675/logo.png"
+    },
+    {
+      "name": "Wrapped ZEC",
+      "symbol": "WZEC",
+      "address": "0x4a64515e5e1d1073e83f30cb97bed20400b66e10",
+      "chain": "ethereum",
+      "logo": "https://github.saturndex.org/ethereum/0x4a64515e5e1d1073e83f30cb97bed20400b66e10/logo.png"
     },
     {
       "name": "DENCHCOIN",
