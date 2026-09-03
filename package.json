@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "generate-index": "node .github/scripts/generate-index.js"
   },
   "repository": "git@github.com:saturndex.org/assets.git",
   "license": "MIT",

@@ -1,0 +1,41 @@
+name: Update Token Index
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "ethereum/0x*/**"
+      - "classic/0x*/**"
+      - ".github/scripts/generate-index.js"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-index
+  cancel-in-progress: true
+
+jobs:
+  generate-index:
+    name: Generate Token Index
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate index.json
+        run: node .github/scripts/generate-index.js
+
+      - name: Commit and push index.json
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add index.json
+          git diff --staged --quiet || git commit -m "chore: update token index [skip ci]"
+          git push
